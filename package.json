@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pawel-kuznik/datasack": "^1.4.2",
     "@pawel-kuznik/force-organizer": "^1.1.1",
-    "@pawel-kuznik/react-datasack": "^1.0.4",
+    "@pawel-kuznik/react-datasack": "^1.0.5",
     "@pawel-kuznik/react-faceplate": "^0.1.22",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

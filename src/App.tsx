@@ -1,11 +1,11 @@
 import './App.css'
-import { FormationTemplateEditor } from './components'
+import { ForceEditor } from './components'
 
 function App() {
 
   return (
     <div>
-      <FormationTemplateEditor/>
+      <ForceEditor/>
     </div>
   )
 }
