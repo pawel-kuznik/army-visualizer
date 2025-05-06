@@ -2,6 +2,7 @@ import { InlineForm, Input } from "@pawel-kuznik/react-faceplate";
 import { FormationTemplate } from "@pawel-kuznik/force-organizer";
 import { usePotentialEntry } from "@pawel-kuznik/react-datasack";
 import { EntryPotential } from "@pawel-kuznik/datasack";
+import { useTemplateRepository } from "../TemplateRepositoryProvider";
 
 
 export interface FormationTemplateEditorProps {
@@ -13,10 +14,12 @@ export interface FormationTemplateEditorProps {
  */
 export function FormationTemplateEditor({ templatePotential }: FormationTemplateEditorProps) {
 
-    const template = usePotentialEntry(templatePotential)
+    const repository = useTemplateRepository();
+    const template = usePotentialEntry(templatePotential);
 
     const handleName = (data: any) => {
-        template.rename(data.name)
+        template.rename(data.name);
+        repository.formations.store(template);
     };
 
     return (
